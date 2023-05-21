@@ -1,4 +1,4 @@
-<h1> GraphMAE: Self-Supervised Masked Graph Autoencoders</h1>
+<h1> Cross-View Masked Model for Self-Supervised Graph Representation Learning</h1>
 
 **Transfer learning for moleculer property prediction**
 
