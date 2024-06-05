@@ -18,5 +18,3 @@ For node classification task:
 python main.py
 ```
 
-The `--dataset` argument should be one of [Cora, CiteSeer, PubMed, Com, Photo, Phy, CS, WikiCS].
-
