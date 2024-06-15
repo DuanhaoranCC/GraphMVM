@@ -1,6 +1,5 @@
 # GraphMVM
 
-IEEE Transactions on Artificial Intelligence
 This repository is for the source code of the journal IEEE Transactions on Artificial Intelligence paper "Cross-View Masked Model for Self-Supervised Graph Representation Learning."
 
 ## Dependencies
