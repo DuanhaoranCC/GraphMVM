@@ -1,7 +1,7 @@
 # GraphMVM
 
-This repository is for the source code of the paper "Cross-View Masked Model for Self-Supervised Graph Representation Learning."
-This paper is under review.
+IEEE Transactions on Artificial Intelligence
+This repository is for the source code of the journal IEEE Transactions on Artificial Intelligence paper "Cross-View Masked Model for Self-Supervised Graph Representation Learning."
 
 ## Dependencies
 
@@ -18,3 +18,11 @@ For node classification task:
 python main.py
 ```
 
+## Cite
+```
+@article{duan2024graphmvm,
+  title={Cross-View Masked Model for Self-Supervised Graph Representation Learning},
+  author={Haoran, Duan, Beibei Yu and Cheng Xie},
+  journal={IEEE Transactions on Artificial Intelligence},
+}
+```
