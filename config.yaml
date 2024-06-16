@@ -1,0 +1,54 @@
+PTC-MR:
+  alpha: 0.1
+  epoch: 100
+  lr: 0.0001
+  n1: 5
+  n2: 4
+  w: 0.0
+  rate: 0.3
+  rate1: 0.5
+DD:
+  alpha: 0.4
+  epoch: 400
+  lr: 0.0008
+  n1: 3
+  n2: 2
+  w: 0.0
+  rate: 0.4
+  rate1: 0.2
+PROTEINS:
+  alpha: 0.2
+  epoch: 700
+  lr: 0.0001
+  n1: 3
+  n2: 2
+  w: 5e-5
+  rate: 0.4
+  rate1: 0.8
+IMDB-BINARY:
+  alpha: 0.9
+  epoch: 450
+  lr: 0.0001
+  n1: 4
+  n2: 5
+  rate: 0.8
+  rate1: 0.3
+  w: 1e-5
+IMDB-MULTI:
+  alpha: 0.5
+  epoch: 400
+  lr: 0.0008
+  n1: 2
+  n2: 5
+  rate: 0.7
+  rate1: 0.6
+  w: 0.0005
+COLLAB:
+  alpha: 0.8
+  epoch: 900
+  lr: 0.0008
+  n1: 4
+  n2: 4
+  rate: 0.7
+  rate1: 0.8
+  w: 0.0

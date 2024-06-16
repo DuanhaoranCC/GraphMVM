@@ -1,0 +1,32 @@
+Cora:
+  alpha: 0.6
+  lr: 0.0005
+  n1: 1.0
+  n2: 1.0
+  p1: 0.4
+  p2: 0.4
+  rate: 0.1
+  rate1: 0.2
+  epoch: 500
+  w: 5e-4
+  dim: 256
+CiteSeer:
+  alpha: 0.5
+  epoch: 700
+  lr: 8e-5
+  p1: 0.8
+  p2: 0.1
+  rate: 0.1
+  rate1: 0.5
+  w: 5e-4
+  dim: 512
+PubMed:
+  alpha: 0.4
+  epoch: 300
+  lr: 0.0005
+  p1: 0.2
+  p2: 0.6
+  rate: 0.1
+  rate1: 0.5
+  w: 0.0
+  dim: 512
