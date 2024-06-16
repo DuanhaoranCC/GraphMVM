@@ -5,7 +5,6 @@ from model import MG
 from torch_geometric import seed_everything
 import numpy as np
 import warnings
-from hyperopt import fmin, tpe, hp, STATUS_OK, Trials
 from eval import label_classification
 from dataset import process_dataset
 import matplotlib.pyplot as plt
@@ -100,17 +99,7 @@ def TT(space):
     model = MG(feat.size(1), 512, space['p1'], space['p2'], space['rate'], space['rate1'], space['alpha'],
                1, 1).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=space['lr'], weight_decay=space['w'])
-    # total_params = sum(p.numel() for p in model.parameters())
-    # print("Number of parameter: %.2fM" % (total_params/1e6))
-    # scheduler = lambda epoch: (1 + np.cos((epoch) * np.pi / 100)) * 0.5
-    # scheduler = lambda epoch: epoch / warmup_steps if epoch < warmup_steps \
-    # else ( 1 + np.cos((epoch - warmup_steps) * np.pi / (max_epoch - warmup_steps))) * 0.5
-    # scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=scheduler)
-    # model.eval()
-    # z1, z2 = model.get_embed(graph, diff_graph, feat, edge_weight)
-    # acc = label_classification(z1 + z2, train_mask, val_mask, test_mask,
-    #                            label, label_type)['Acc']['mean']
-    # print(acc)
+
     for epoch in range(1, int(space['epoch']) + 1):
         model.train()
         loss = model(graph, diff_graph, feat, edge_weight)
@@ -135,23 +124,7 @@ def TT(space):
     # plot_embeddings(X, label)
     # print(cluster)
     print(space)
-    return {'loss': -round(space['acc'], 4), 'status': STATUS_OK}
 
-
-# trials = Trials()
-# space = {
-#     "lr": hp.choice('lr', [1e-5, 5e-5, 8e-5, 1e-4, 5e-4, 8e-4, 1e-3,
-#                            5e-3, 8e-3, 1e-2, 5e-2, 8e-2]),
-#     "w": hp.choice('w', [0.0, 1e-5, 5e-5, 1e-4, 5e-4, 1e-3]),
-#     "rate": hp.quniform('rate', 0.1, 0.9, 0.1),
-#     "rate1": hp.quniform('rate1', 0.1, 0.9, 0.1),
-#     "alpha": hp.quniform('alpha', 0.1, 0.9, 0.1),
-#     "epoch": hp.quniform('epoch', 50, 1000, 50),
-#     "p1": hp.quniform('p1', 0.0, 0.9, 0.1),
-#     "p2": hp.quniform('p2', 0.0, 0.9, 0.1),
-# }
-# best = fmin(TT, space=space, algo=tpe.suggest, max_evals=200, trials=trials)
-# print(best)
 
 # Cora
 # TT({'alpha': 0.6, 'beta': 1.0, 'beta1': 1.0, 'lr': 0.0005, 'n1': 1.0, 'n2': 1.0, 'p1': 0.4, 'p2': 0.4,
