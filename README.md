@@ -21,7 +21,11 @@ python main.py
 ```
 @article{duan2024graphmvm,
   title={Cross-View Masked Model for Self-Supervised Graph Representation Learning},
-  author={Haoran, Duan, Beibei Yu and Cheng Xie},
+  author={Haoran Duan, Beibei Yu, and Cheng Xie},
   journal={IEEE Transactions on Artificial Intelligence},
+  volume={5},
+  number={11},
+  pages={5540--5552},
+  year={2024}
 }
 ```
